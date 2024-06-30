@@ -244,9 +244,147 @@ Then Next.
 
 Finally, click Finish.
 
+<br />
+
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b29bf9c1-bea3-4b76-a449-3c39dd48cfe1)
 
+
+Open Wireshark and select the Ethernet connection.
+
 <br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/4a93ec58-4b60-47a2-8ca6-812947c0f5a7)
+
+Then select the Shark icon to start capturing packets.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/821f3688-eb9c-4062-a68e-14386f71433a)
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/4212c4c0-b1f9-43f7-9091-3d3c7a8383b4)
+
+If I filter for ICMP traffic you can see there are no results.  There is currently no ICMP traffic and no pings happening.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/04e2101f-f883-49fc-8353-4876216e950c)
+
+Back in the Azure portal we can see the Private IP address of VM2 is 10.0.0.5.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/c2f758a3-9cba-44bf-b785-0908d04ad000)
+
+If we use Powershell to ping VM2 IP address 10.0.0.5 we can see the four pings Sent and Received and in Wireshark the Requests and Replies between VM1 and VM2.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/dbd9b485-7a25-44d4-bc97-554ad1ed3b5f)
+
+If I then ping Google we can also see the ICMP traffic for the Replies and Requests.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/71c92624-a1b9-4ac7-9e59-a80b5215e413)
+
+Next we can issue the command ping 10.0.0.5 -t to send perpetual pings across the network.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/074b81b1-a3a2-4527-bc26-674c9e52b386)
+
+We can now change the Firewall settings on VM2 to block ICMP traffic to prevent it from being pinged by VM1.
+ 
+To do this we can search for Network Security Groups within Azure.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/baf46ffe-f710-4ff4-84d4-021a68e4af70)
+
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/c1fd377a-ffcd-4dd7-ab4c-0995f39560c5)
+
+Select VM2.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/c3bdd88d-bac9-4051-8a7d-af3922e43a95)
+
+Under Settings select Inbound Security Rules.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/2540d8b8-63cc-4d75-ab7f-ae153eccacd9)
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/0ddf3cbf-574f-4a5e-bb93-b282f6beba81)
+
+Select Add to create a new rule.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/f3694d6d-1c9e-41db-8c53-54451d396521)
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/54ff33e7-7060-4b8b-906d-107c549ee91b)
+
+<br />
+
+I can then enter the following configuration:
+
+<br />
+
+- Source: Any
+- Source Port Ranges: *
+- Destination: Any
+- Service: Custom
+- Destination Port Ranges: *
+- Protocol: ICMPv4
+- Action: Deny
+- Priority: 200
+- Name: DENY_ICMP_PING_FROM_ANYWHERE
+
+   <br />
+
+  Then click Add.
+
+  <br />
+
+  ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/63285b66-45b3-4850-9d46-fb8381a3e384)
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
