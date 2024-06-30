@@ -125,6 +125,7 @@ I then followed the same steps again to create the second virtual machine with t
 - Authentication: Password
 - Username: labuser2
 - Password: Passw0rd1234
+<br />
 
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/6a789a6a-5220-48a5-b5dd-3b1f261dcadf)
 
@@ -136,13 +137,141 @@ I then followed the same steps again to create the second virtual machine with t
 
 Then select Next for Disks then Next for Networking.  We can see the virtual network, subnet and public IP have been automatically selected so I can then select Review and Create.
 
+<br />
+
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/91711f60-dce2-4e4a-91fa-6a78c71e187b)
 
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/a538f852-2fa7-418e-9b51-a9686e06121e)
 
 Once the validation is passed we can then see the deployment complete.
 
+<br />
+
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/9ec2e7da-6398-4cfd-8f3e-2aed6218c9d6)
+
+We can then see both machines running in the Virtual Machines blade.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/3ba0e787-b615-46f0-bcae-41f960ebc0cc)
+
+The first thing to do is select VM1 and connect to it via Remote Desktop.  To do this copy the IP address of VM1.
+
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/e4cd384e-cef0-4f89-b002-8c63479cf0c8)
+
+Then search for Remote Destop on the physical machine, paste the IP address of the physical machine and click Connect.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/61b1f662-b80e-492f-aab1-4f54f7b64af8)
+
+I am then prompted to enter my password.  Select and More Choices then Use A Different Account.  Type the username labuser1 and the password PAssw0rd1234 then click OK
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/17fe6cc6-97b4-44bc-9a05-b30f9c42251a)
+
+A warning appears saying the identity of the remote computer cannot be idetified but click Yes to connect.  
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/6c817338-1d27-40f2-8c8a-106ce423498e)
+
+Turn off all the privacy settings and click accept.  Click Yes to allow the PC to be discoverable by other PCs and devices on the network.  Open a web browser and search download wireshark.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/74df65ab-6a0a-4a24-89a2-62230291d373)
+
+Then download the Windows installer and click Open File once it has downloaded.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/72ca1d47-0f40-4bc1-8e11-ff7a7bdf7b70)
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/428d15bc-b5e1-4bd3-88f0-28ac88f10207)
+
+On the installation Setup keep pressing Next then click Noted for the License Agreement.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/fc3989fa-47c3-4eaf-b40d-41f859899663)
+<p>
+  
+</p>
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/dbda6882-54c8-4021-878c-bbf3cec33902)
+
+Then keep clicking Next to choose the default settings.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/aa5d4608-792c-4348-8426-a15a09b54751)
+
+Finally, click on Install.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/78c1f71b-c5d1-406a-962f-c18376dd4a9b)
+
+Click on I Agree for the License Agreement.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/86b3ac64-2469-4571-b56f-fa17b178a444)
+
+Click on Next.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/de4e9cc1-8ede-4b8d-ad18-c72a2941730b)
+
+Then Finish.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/4c45f33b-0857-4730-b44f-31691c760f8e)
+
+Then Next.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/4c240239-7ace-4c28-8ca1-d9a983abb930)
+
+Finally, click Finish.
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b29bf9c1-bea3-4b76-a449-3c39dd48cfe1)
+
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
