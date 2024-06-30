@@ -404,6 +404,25 @@ If I type in the password Passw0rd1234 we can see I now have a SSH connection.
 
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/a14944a7-d629-485c-891e-2b60a8cb722c)
 
+I can issue some Linux commands to show I have Secure Shelled into the Ubuntu VM and see that it is generating SSH traffic in Wireshark.  
+
+I can then use the exit command to exit the SSH session.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b9b91c81-8b89-46b2-879f-6752fc5fa45b)
+
+Because SSH uses port 22 another way to filter SSH traffic is to use tcp.port == 22.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/d2c14476-a8ca-42f5-a43d-ea5cbdb9f693)
+
+
+
+
+
+
 
 
 
