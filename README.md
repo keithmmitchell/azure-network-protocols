@@ -35,7 +35,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 </p>
 <p>
-I created a resource group and then a virtual network with the 192.168.0.0/16 address.  Within that network address I create a subnet with the 192.168.1.0/24 address.  I then created two virtual machines, VM1 running Windows 10 and VM2 running Ubuntu. 
+I created a resource group and then a virtual network with the 10.0.0.0/24 address.  Within that network address I create a subnet with the 192.168.1.0/24 address.  I then created two virtual machines, VM1 running Windows 10 and VM2 running Ubuntu. 
 
 To do this I selected Resource Groups from the menu below to bring up the Resource Groups blade.
 </p>
@@ -87,6 +87,7 @@ I then selected the following
 
 - Resource Group: NSGLab
 - Virtual Machine Name: VM1
+- Region: (Europ) UK South
 - Image: Windows 10 Pro
 - Size: Standard_E2s_v3 - 2 vcpus, 16GiB Memory
 - Username: labuser1
@@ -99,6 +100,55 @@ Then confirm on the checkbox I have a Windows license and select Next to Disks t
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/c41e71bf-3664-4448-a2bd-7af23b8e69c5)
 
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/f84c35b2-8f8b-4487-bdcb-cb90e6a4c0e1)
+
+<p> We can see the subnet is 10.0.0.0/24 and then Review and Create </p>
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/ab90e78a-1ba3-4bd2-829d-e2ddc58d9e7a)
+
+Once it has been validated I then click Create
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b54359e2-8e38-4151-88fb-de7b8e4a590f)
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b331e87a-7f2b-4630-8a4c-d3ec8e620ed4)
+
+After a few minutes we can see the deployment is complete
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/8fa96292-c9e4-4ab8-8271-0f32a5f0985c)
+
+I then followed the same steps again to create the second virtual machine with the following settings:
+
+- Resource Group: NSGLab
+- Virtual Machine Name: VM2
+- Region: (Europe) UK South
+- Image: Ubuntu Server 22.04
+- Size: Standard_E2s_v3 - 2 vcpus, 16GiB memory
+- Authentication: Password
+- Username: labuser2
+- Password: Passw0rd1234
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/6a789a6a-5220-48a5-b5dd-3b1f261dcadf)
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/63c4dbd8-7358-409c-9018-55dd782c0aba)
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/4fa6718f-2b2f-4e4b-8f79-686725886f52)
+
+
+
+Then select Next for Disks then Next for Networking.  We can see the virtual network, subnet and public IP have been automatically selected so I can then select Review and Create.
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/91711f60-dce2-4e4a-91fa-6a78c71e187b)
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/a538f852-2fa7-418e-9b51-a9686e06121e)
+
+Once the validation is passed we can then see the deployment complete.
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/9ec2e7da-6398-4cfd-8f3e-2aed6218c9d6)
+
+
+
+
+
+
 
 
 
