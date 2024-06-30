@@ -352,11 +352,70 @@ I can then enter the following configuration:
 
    <br />
 
-  Then click Add.
+Then click Add.
 
   <br />
 
   ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/63285b66-45b3-4850-9d46-fb8381a3e384)
+
+We can now see that immediately the ping has timed out and also in Wireshark the Requests from VM1 10.0.0.4 but no Replies from VM2 10.0.0.5.
+
+  <br />
+
+  ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/9684645f-323c-4757-90ba-00bfa73edf34)
+
+  <br />
+
+On the Inbound Security Rules we can select the rule to change it to Allow.
+
+  <br />
+
+  ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/4f916de0-5469-409f-bfbb-5d24674158f1)
+
+  <br />
+
+  ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b1a92832-a801-43ad-a705-b5fd81fc7586)
+
+  <br />
+
+On VM1 we can now see the ping is being sent and received again.
+
+  <br />
+
+  ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/8023e654-2fb7-4c61-a9e3-754325ada67c)
+
+<br />
+
+I can then press Ctrl+C to stop the pings.
+
+  <br/>
+
+  ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/90ec61fa-4c28-48a4-9050-2a18bf17edda)
+
+I can now change the filter from ICMP to SSH then SSH into VM2 using the command SSH labuser2@10.0.0.5.  We can then immediately see the SSH traffic in Wireshark.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/e51b3e57-a90f-4384-9eb5-f9542facd4e9)
+
+If I type in the password Passw0rd1234 we can see I now have a SSH connection.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/a14944a7-d629-485c-891e-2b60a8cb722c)
+
+
+
+
+
+
+
+  
+
+
+
+
+
 
 
   
