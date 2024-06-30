@@ -418,6 +418,83 @@ Because SSH uses port 22 another way to filter SSH traffic is to use tcp.port ==
 
 ![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/d2c14476-a8ca-42f5-a43d-ea5cbdb9f693)
 
+Next I can filter for DHCP traffic.  If I issue the ipconfig /renew command to force the renewal of the IP address we can see in Wireshark the Request and Acknowledgement between VM1 and  the DCHP server in the Azure network.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/685b7757-11d9-46c7-abfe-2cf9b65914ff)
+
+Next I will filter for DNS traffic by using the command nslookup www.google.com which returns the IPv4 and IPv6 addresses.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b228d6ef-1e48-4168-91d2-b5267b14f2c4)
+
+I can also filter using udp.port == 53.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/35f442ac-e867-4758-9783-940ebec85c13)
+
+Finally, I can now filter using rdp or tcp.port ==3389 to filter all the remote desktop traffic.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/a3e9af41-5adc-49cc-ae8d-6b2a46dd241a)
+
+Now that I am finished with this lab I need to delete the resources.  I can search for Resource Groups.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/d18995fa-9f55-4bf2-8715-8f10ae11d40e)
+
+<br/>
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/d9d2d4d7-5342-4147-a9b8-ec334325dc2d)
+
+Then select NSGLab.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/17c49375-6889-4b64-9c29-6841f82b42c6)
+
+Then select Delete Resource Group.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/b50c08cd-967f-487f-9d33-81e29331cd12)
+
+<br />
+
+Type in the name of the Resource Group then click Delete.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/15344694-249a-4585-9aca-77c39abafff8)
+
+Next select the NetworkWatcherRG Resource Group and follow the same steps to delete it.
+
+<br />
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/1dc68e11-03d0-4f20-86d4-c9342b6abba9)
+
+<br />
+
+If I now go back to the rResource Groups I can see there are no Resource Groups to display which ends this lab.
+
+![image](https://github.com/keithmmitchell/azure-network-protocols/assets/174253055/0e59c556-6bb4-4da8-ba38-f5c676c53cdb)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
