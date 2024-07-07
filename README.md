@@ -35,9 +35,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 </p>
 <p>
-I created a resource group and then a virtual network with the 10.0.0.0/24 address.  Within that network address I create a subnet with the 192.168.1.0/24 address.  I then created two virtual machines, VM1 running Windows 10 and VM2 running Ubuntu. 
 
-To do this I selected Resource Groups from the menu below to bring up the Resource Groups blade.
+
+Select Resource Groups from the menu below to bring up the Resource Groups blade.
 </p>
 <p>
   
